@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script type="text/javascript" src="/jquery-1.8.3.min.js">
+	
+</script>
+<body>
+	<div id="aaa">
+		
+	</div>
+<script>
+
+window.onload = function (){
+	setInterval(function working(){ 
+		// $.get('/api/v1/test_one',function(msg){
+			
+		// 		$('#aaa').empty();
+		// 		// var buy = jQuery.parseJSON(msg)['buy'];
+		// 		// $.each(buy,function(key,val){
+		// 		// 	$('#aaa').append(val.typebi)
+		// 		// });
+				
+		// 						var buy = jQuery.parseJSON(msg)['sell'];
+		// 		$.each(buy,function(key,val){
+		// 			$('#aaa').append(val)
+		// 		});
+			
+  //  });
+
+    
+    
+		$.get('/api/v1/abcd',function(msg){
+			
+			
+			
+				var buy = jQuery.parseJSON(msg);
+				$.each(buy,function(key,val){
+				
+				$('#aaa').append('<br>'+val.time+'------'+val.typebi);
+				});
+				
+			
+    });
+    
+    		
+    		
+    		
+    		
+    
+    
+	},400); 
+}
+</script>
+</body>
+</html>
